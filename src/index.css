@@ -1,0 +1,57 @@
+/* tailwind */
+@import "tailwindcss";
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+body {
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+}
+
+/* --------------------------------------------------------------------- */
+/*  inputs autofill bg */
+input:-webkit-autofill {
+  background-color: white !important; /* Set your desired background color */
+  color: black !important; /* Set your desired text color */
+  box-shadow: 0 0 0px 1000px white inset !important; /* Overrides the browser's background color */
+}
+
+/* --------------------------------------------------------------------- */
+/* removing eye icon from input password */
+
+/* For Microsoft Edge and Internet Explorer */
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+/* For WebKit browsers (Chrome, Safari, etc.) */
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Select styling */
+select {
+  appearance: none; /* Remove default styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+select::-ms-expand {
+  display: none; /* Hide default arrow in IE */
+}
+
+/* ---------------------------------------------------------------------- */
+/* removing input number arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/* removing outline from all inputs */
+input,
+select {
+  outline: 0;
+}
