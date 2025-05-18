@@ -8,12 +8,12 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { theme, darkMode, clearToken, setUser, setMSections } = useStore();
 
-  function toggleDarkMode() {
-    const htmlElement = document.documentElement;
-    const isDarkMode = htmlElement.classList.toggle('dark');
-    darkMode(isDarkMode ? 'dark' : 'light');
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-  }
+  // function toggleDarkMode() {
+  //   const htmlElement = document.documentElement;
+  //   const isDarkMode = htmlElement.classList.toggle('dark');
+  //   darkMode(isDarkMode ? 'dark' : 'light');
+  //   localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+  // }
 
   const logOut = () => {
     clearToken();
@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <div className="sticky top-0 z-30 p-6 border-b dark:border-gray-600 text-white flex items-center justify-end gap-4">
-      <motion.div
+      {/* <motion.div
         onClick={toggleDarkMode}
         className="p-3 bg-white dark:bg-[#171e2e] text-[#2a52be] dark:text-white border border-white dark:border-gray-700 w-fit rounded-full cursor-pointer"
         whileHover="hover"
@@ -56,7 +56,7 @@ const Navbar = () => {
             </motion.span>
           )}
         </AnimatePresence>
-      </motion.div>
+      </motion.div> */}
 
       <motion.div
         onClick={logOut}

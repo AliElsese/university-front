@@ -77,10 +77,11 @@ const MSectionsPage = () => {
         className="absolute z-10 top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2">
         <source src={gifBg} type="video/mp4" />
       </video>
-      <div className="relative z-50 min-h-screen flex flex-col bg-[#0000004a] dark:bg-[#0d1321cc] backdrop-blur">
+      <div className="relative z-50 min-h-screen flex flex-col gap-12 bg-[#0000004a] dark:bg-[#0d1321cc] backdrop-blur">
         <Navbar />
+        <h2 className="text-white text-6xl text-center">Tanta University</h2>
         <div
-          className="grow px-5 md:px-10 xl:px-50 flex items-center gap-5 flex-wrap pt-5"
+          className="grow px-5 md:px-10 xl:px-50 flex items-center gap-5 flex-wrap"
         >
           {
             confirmationPopUpToggel

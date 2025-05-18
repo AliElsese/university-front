@@ -14,18 +14,18 @@ const LoginPage = () => {
     }
   }, [])
   // catch theme preference
-  const location = useLocation();
-  useEffect(() => {
-    if (location.pathname === '/login') {
-      // Follow system preference on specific page
-      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (prefersDarkMode) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-    }
-  }, [location]);
+  // const location = useLocation();
+  // useEffect(() => {
+  //   if (location.pathname === '/login') {
+  //     // Follow system preference on specific page
+  //     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  //     if (prefersDarkMode) {
+  //       document.documentElement.classList.add('dark');
+  //     } else {
+  //       document.documentElement.classList.remove('dark');
+  //     }
+  //   }
+  // }, [location]);
 
   return (
     <div className='relative h-full w-full overflow-hidden flex justify-center items-center min-h-screen p-2'>
