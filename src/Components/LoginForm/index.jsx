@@ -67,13 +67,13 @@ const LoginForm = () => {
               value={values.userType}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={`text-black w-full h-[40px] text-lg bg-white border border-[#2b6cb033] rounded ps-3`}
+              className={`text-black cursor-pointer w-full h-[40px] text-lg bg-white border border-[#2b6cb033] rounded ps-3`}
             >
               <option value="employee">شؤون ادارية</option>
               <option value="doctor">دكتور جامعي</option>
               <option value="student">طالب جامعي</option>
             </select>
-            <div className='absolute top-1/2 -translate-y-1/2 end-[10px] pointer-events-none'>
+            <div className='absolute text-black top-1/2 -translate-y-1/2 end-[10px] pointer-events-none'>
               <IoMdArrowDropdown />
             </div>
           </div>

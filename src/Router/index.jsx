@@ -136,26 +136,36 @@ const Router = () => {
                 :
                 user.role === "doctor"
                   ?
-                  <Route
-                    path="/doctor-subjects"
-                  >
+                  <>
                     <Route
-                      index
+                      path="chart"
                       element={
                         <LayoutWraper>
-                          <DoctorSubjects />
+                          <ChartPage />
                         </LayoutWraper>
                       }
                     />
                     <Route
-                      path=":subjectsName/markes"
-                      element={
-                        <LayoutWraper>
-                          <MarkesPage />
-                        </LayoutWraper>
-                      }
-                    />
-                  </Route>
+                      path="/doctor-subjects"
+                    >
+                      <Route
+                        index
+                        element={
+                          <LayoutWraper>
+                            <DoctorSubjects />
+                          </LayoutWraper>
+                        }
+                      />
+                      <Route
+                        path=":subjectsName/markes"
+                        element={
+                          <LayoutWraper>
+                            <MarkesPage />
+                          </LayoutWraper>
+                        }
+                      />
+                    </Route>
+                  </>
                   :
                   <Route
                     path="/:yearId"
@@ -165,6 +175,14 @@ const Router = () => {
                       element={
                         <LayoutWraper>
                           <StudentSubjects />
+                        </LayoutWraper>
+                      }
+                    />
+                    <Route
+                      path="chart"
+                      element={
+                        <LayoutWraper>
+                          <ChartPage />
                         </LayoutWraper>
                       }
                     />

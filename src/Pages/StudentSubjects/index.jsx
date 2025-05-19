@@ -146,7 +146,6 @@ const StudentSubjects = () => {
           <Loader />
           :
           <>
-
             {
               popUpToggel &&
               <div
@@ -167,7 +166,7 @@ const StudentSubjects = () => {
             }
             <div className='min-h-full pt-2 flex flex-col gap-2'>
               <div
-                className="actions flex md:flex-row md:justify-between md:items-end flex-col-reverse gap-2"
+                className="actions flex md:flex-row md:justify-between md:items-end flex-col-reverse gap-5"
               >
                 {
                   subjects.length !== 0 && user.role != "student"
@@ -182,7 +181,20 @@ const StudentSubjects = () => {
                 {
                   user.role === "student"
                   &&
-                  <GenralGPA />
+                  <GenralGPA
+                    page={"general-gpa"}
+                    content={"التقدير العام"}
+                    color={"bg-green-500"}
+                  />
+                }
+                {
+                  user.role === "student"
+                  &&
+                  <GenralGPA
+                    page={"chart"}
+                    content={"الاحصائيات"}
+                    color={"bg-[#2a52be]"}
+                  />
                 }
                 <AddNewBtn />
               </div>

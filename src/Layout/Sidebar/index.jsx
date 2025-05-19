@@ -37,7 +37,7 @@ const Sidebar = () => {
 
       <Link
         to={"/"}
-        className="logo flex justify-center items-center gap-2 xl:text-xl lg:text-lg px-2 md:px-4 py-6"
+        className="logo outline-none flex justify-center items-center gap-2 xl:text-xl lg:text-lg px-2 md:px-4 py-6"
       >
         {
           closeSide

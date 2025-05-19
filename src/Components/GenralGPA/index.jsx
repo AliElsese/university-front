@@ -1,18 +1,13 @@
 import { Link } from "react-router-dom";
 
-const GenralGPA = ({ data, setData }) => {
-
-
-
+const GenralGPA = ({ page, content, color }) => {
   return (
-    <div>
-      <Link
-        to={"general-gpa"}
-        className="bg-green-500 font-bold md:w-fit sm:w-full px-4 py-3 text-white rounded-lg cursor-pointer"
-      >
-        التقدير العام
-      </Link>
-    </div>
+    <Link
+      to={page}
+      className={`${color} font-bold md:w-fit text-center block px-4 py-2 text-white rounded-lg cursor-pointer`}
+    >
+      {content}
+    </Link>
   );
 };
 

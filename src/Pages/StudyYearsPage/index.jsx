@@ -14,7 +14,8 @@ import UpdateYear from "../../Components/UpdateYear";
 const StudyYearsPage = () => {
   const navigate = useNavigate();
   // Global State
-  const { BASE_URL,
+  const {
+    BASE_URL,
     token,
     popUpToggel,
     popUpIsClosed,
@@ -173,7 +174,7 @@ const StudyYearsPage = () => {
                   ?
                   <>
                     <Table
-                      headers={["#", "السـنة الدراسية", "", "المصاريف"]}
+                      headers={["#", "السـنة الدراسية", "", "المصاريف",""]}
                       tableData={years}
                       id={yearId}
                       pagenatedArray={pagenatedArray}

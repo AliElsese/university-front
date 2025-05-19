@@ -3,8 +3,7 @@ import { useStore } from '../../Store';
 import { FaUserTie } from "react-icons/fa";
 import { FaUserGraduate } from "react-icons/fa6";
 import { MdTimer } from "react-icons/md";
-import { PiBooksFill } from "react-icons/pi";
-import { PiChartPieSliceFill } from "react-icons/pi";
+import { PiBooksFill, PiChartPieSliceFill } from "react-icons/pi";
 import { motion, AnimatePresence } from "framer-motion";
 
 const EmployeeSide = () => {

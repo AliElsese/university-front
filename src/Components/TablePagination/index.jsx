@@ -20,9 +20,10 @@ const TablePagination = ({ tableData, page, setPage, limit, setLimit }) => {
       className={`${style.shadowCustomed} mb-4 px-4 py-6 bg-gray-100 dark:bg-gray-800 shadow-lg text-gray-900 dark:text-gray-400 rounded flex justify-center items-center md:gap-2`}
     >
       <div
+        onClick={nextPage}
         className={`hover:text-white hover:bg-gray-900 p-2 rounded-full ${page === Math.ceil(tableData.length / limit) ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
       >
-        <HiOutlineArrowLongRight onClick={nextPage} />
+        <HiOutlineArrowLongRight />
       </div>
       <p>
         <select
@@ -39,10 +40,10 @@ const TablePagination = ({ tableData, page, setPage, limit, setLimit }) => {
         <span className="px-2 py-px text-gray-500">{Math.ceil(tableData.length / limit)}</span>
       </p>
       <div
+        onClick={prevPage}
         className={`hover:text-white hover:bg-gray-900 p-2 rounded-full ${page === 1 ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
       >
         <HiOutlineArrowLongLeft
-          onClick={prevPage}
         />
       </div>
     </div>

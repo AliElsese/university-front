@@ -5,9 +5,10 @@ import { FaEye, FaPlus } from "react-icons/fa";
 import { useStore } from "../../Store";
 import { Link } from "react-router-dom";
 import Confirmation from "../Confirmation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TablePagination from "../TablePagination";
 import { motion, AnimatePresence } from "framer-motion";
+import NextYearBtn from "../NextYearBtn";
 
 
 const Table = ({ headers, tableData, id, pagenatedArray, page, setPage, limit, setLimit, deleteRow, getOneData, confirmPayment }) => {
@@ -188,7 +189,7 @@ const Table = ({ headers, tableData, id, pagenatedArray, page, setPage, limit, s
                     {
                       pageName === "studyYears"
                       &&
-                      <td className="">
+                      <td>
                         <Link
                           to={`${id[index]}/finance`}
                           className="text-lg py-6 px-4 text-blue-600 block w-fit ms-4"
@@ -196,6 +197,19 @@ const Table = ({ headers, tableData, id, pagenatedArray, page, setPage, limit, s
                           <FaEye />
                         </Link>
                       </td>
+                    }
+                    {
+                      pageName === "studyYears" && index !== pagenatedArray.length - 1
+                        ?
+                        <td>
+                          <NextYearBtn
+                            yearId={id[index]}
+                            nextYearId={id[index + 1]}
+                          />
+                        </td>
+                        :
+                        <td>
+                        </td>
                     }
                     {
                       pageName === "finance"
